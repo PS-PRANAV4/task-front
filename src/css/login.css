@@ -1,0 +1,18 @@
+
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    width: 100%;
+    height: 100vh;
+        background-image: url('../images/login.jpg');
+}
+
+.card{
+    /* opacity: 50%; */
+    background-color: rgb(177 5 230);
+    -webkit-box-shadow: -2px 0px 25px -1px rgba(0,0,0,0.86); 
+box-shadow: -2px 0px 25px -1px rgba(0,0,0,0.86);
+}

@@ -1,0 +1,67 @@
+/* CalendarView.css */
+
+.calendar-container {
+  background: #f4f7fa;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.calendar-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.normal-event {
+  background-color: #2196f3; /* Blue color */
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.normal-event:hover {
+  background-color: #1976d2; /* Darker blue on hover */
+}
+
+.important-event {
+  background-color: #f44336; /* Red color for important events */
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.important-event:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+.rbc-calendar {
+  font-family: 'Arial', sans-serif;
+  border: none;
+}
+
+.rbc-header {
+  background-color: #2196f3;
+  color: white;
+  font-weight: bold;
+}
+
+.rbc-selected {
+  background-color: #1976d2;
+}
+
+.rbc-event {
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.rbc-day-slot {
+  background-color: #f9f9f9;
+}
+
+.rbc-month-view {
+  background-color: #ffffff;
+}

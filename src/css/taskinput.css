@@ -1,0 +1,36 @@
+
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.task-label {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Date picker input styles */
+.task-date-picker {
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid #9575cd; /* Darker purple border */
+    border-radius: 5px;
+    background-color: #673ab7; /* Match with the sidebar */
+    color: #fff;
+}
+
+.task-date-picker::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Makes the calendar icon white */
+}
+
+/* Hover and focus effects */
+.task-date-picker:hover, 
+.task-date-picker:focus {
+    border-color: #d1c4e9; /* Lighter purple on hover/focus */
+    outline: none;
+}
+
