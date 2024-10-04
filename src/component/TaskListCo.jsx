@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import axios from 'axios';
 
+import CustomModal from './modal';
+
 
 const FilterContainer = styled.div`
   display: flex;
@@ -18,6 +20,9 @@ const DataTableComponent = (props) => {
 
     const {columns,data,handleClickRow,search_filter} = props
     const [filterText, setFilterText] = useState('');
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [curRow,setCurRow] = useState({id:"",task_name:"",sheduled_time:""})
+    
  
 
     const [ tableData,setTableData] = useState([])
@@ -32,10 +37,11 @@ const DataTableComponent = (props) => {
 
 
   const handleEdit = (row) => {
+    setCurRow(row)
+    setIsModalOpen(true)
     
-    console.log('Edit row:', row);
    
-    navigate(`/edit/${row.id}`);
+   
   };
 
   const handleDelete =async (row) => {
@@ -222,7 +228,13 @@ useEffect(() => {
 
         pointerOnHover
       />
+
+<CustomModal modalFunc={setIsModalOpen} row={curRow} changeRow={setCurRow}  refresh={fetchData}  modalBool={isModalOpen} ></CustomModal>
+      
     </div>
+
+
+
   );
 };
 
