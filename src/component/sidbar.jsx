@@ -7,6 +7,10 @@ import { useNavigate } from "react-router-dom";
 function Sidebar() {
 
     const navigate = useNavigate();
+    const logout = ()=>{
+      localStorage.clear()
+      navigate('/login')
+    }
    
     return (
 
@@ -24,6 +28,7 @@ function Sidebar() {
     <div class="nav-button" onClick={()=>navigate('/calender')}><i class="fas fa-magic"></i><span>Calender view</span></div>
     <hr/>
     <div   onClick={()=>navigate('/list')}class="nav-button"><i class="fas fa-gem"></i><span>Task list</span></div>
+    <div   onClick={()=>{logout()}}class="nav-button"><i class="fas fa-gem"></i><span>Logout</span></div>
     <div id="nav-content-highlight"></div>
    
   </div>
