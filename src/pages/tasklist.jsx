@@ -14,6 +14,7 @@ function TaskList() {
 <DataTableComponent/>
         </div>
     </div>
+    
   )
 }
 
